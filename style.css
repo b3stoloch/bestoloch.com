@@ -143,14 +143,14 @@ body {
 .header h1 {
     font-family: 'MyCustomFont', sans-serif !important;
     /* остальные стили остаются */
-    font-weight: 700;
-    font-size: 2.5rem;
+    font-weight: 500;
+    font-size: 1.5rem;
     color: #ff3333;
     text-transform: uppercase;
     letter-spacing: 1.5px;
 }
 .header h1 {
-    font-size: 7rem !important; /* Было 2.5rem */
+    font-size: 5rem !important; /* Было 2.5rem */
     /* остальные стили */
 }/* 1. Подключите шрифт */
 @font-face {
@@ -215,4 +215,5 @@ body {
     color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 1.5px;
+
 }
