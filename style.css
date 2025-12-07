@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), /* Затемняющий градиент */
+        url('https://i.pinimg.com/1200x/df/b1/9f/dfb19fd856363981b08905383fdc929d.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    
+    /* Фоновое изображение для контейнера */
+    background: 
+        /* Затемняющий слой поверх изображения */
+        linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.9)),
+        /* Само изображение */
+        url('https://i.pinimg.com/originals/f7/91/2b/f7912bc7ef62b5e40c96b91175345c5d.gif');
+    
+    background-size: cover;
+    background-position: center;
+    background-attachment: local; /* Фон прокручивается с контентом */
+    
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 15px 35px rgba(255, 0, 0, 0.15);
+    border: 1px solid rgba(255, 0, 0, 0.2);
+    color: #fff;
+    position: relative;
+}
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #ff0000;
+    padding-bottom: 15px;
+}
+
+.header h1 {
+    color: #ff0000;
+    font-size: 28px;
+}
+
+.tagline {
+    color: #aaa;
+    font-style: italic;
+}
+
+.bio {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #ff0000;
+    margin-bottom: 15px;
+}
+
+.bio h2 {
+    color: #ff0000;
+    margin-bottom: 10px;
+}
+
+.bio p {
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.buttons {
+    margin-bottom: 30px;
+}
+
+.buttons h2 {
+    color: #ff0000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn.red {
+    background-color: #ff0000;
+    color: white;
+}
+
+.btn.black {
+    background-color: #222;
+    color: #ff0000;
+    border: 2px solid #ff0000;
+}
+
+.btn:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+.footer {
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+}
+/* 1. Подключите шрифт */
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('fonts/who\ asks\ satan.ttf') format('truetype');
+}
+
+/* 2. Примените ТОЛЬКО к заголовку */
+.header h1 {
+    font-family: 'MyCustomFont', sans-serif !important;
+    /* остальные стили остаются */
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #ff3333;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+.header h1 {
+    font-size: 7rem !important; /* Было 2.5rem */
+    /* остальные стили */
+}/* 1. Подключите шрифт */
+@font-face {
+    font-family: 'MyCustomFont2'; /* Придумайте любое имя */
+    src: url('fonts/Unbounded-Medium.ttf') format('truetype');
+    /* Или .otf → format('opentype') */
+    /* Или .woff → format('woff') */
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MyCustomFont3'; /* Придумайте любое имя */
+    src: url('fonts/Unbounded-ExtraLight.ttf') format('truetype');
+    /* Или .otf → format('opentype') */
+    /* Или .woff → format('woff') */
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+/* === ШРИФТ ДЛЯ ЗАГОЛОВКА "LINKS" === */
+.buttons h2 {
+    font-family: 'MyCustomFont3', sans-serif !important;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #ff3333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+/* === ШРИФТ ДЛЯ ВСЕХ КНОПОК В СЕКЦИИ === */
+.buttons .btn.red {
+    font-family: 'MyCustomFont2', sans-serif !important;
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    
+    /* Остальные ваши стили остаются */
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(145deg, #cc0000, #ff3333);
+}
+@font-face {
+    font-family: 'MyCustomFont22';
+    src: url('fonts/Unbounded-Light.ttf') format('truetype');
+}
+
+/* 2. Примените ТОЛЬКО к заголовку */
+.tagline {
+    font-family: 'MyCustomFont22', sans-serif !important;
+    /* остальные стили остаются */
+    font-weight: 200;
+    font-size: 0.5rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
