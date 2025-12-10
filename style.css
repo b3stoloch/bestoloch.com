@@ -1,0 +1,385 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+}
+
+body {
+    background: 
+        linear-gradient(135deg, 
+            rgba(255, 255, 255, 0.9) 0%, 
+            rgba(240, 240, 240, 0.9) 100%),
+        url('https://i.pinimg.com/1200x/68/26/b3/6826b31efb4ab44cc028b7c20b6df8c7.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #333;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    min-height: 100vh;
+    animation: fadeIn 1s ease-out;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    
+    /* ФОН ДЛЯ ОСНОВНОЙ ПАНЕЛИ */
+    background: 
+        /* Полупрозрачный белый слой (регулируйте последнее число - прозрачность) */
+        linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.96)),
+        /* Ваше фоновое изображение */
+        url('https://i.pinimg.com/originals/00/d7/af/00d7af33f7127746e4ba0d6b200de8bf.gif');
+    
+    background-size: cover;
+    background-position: center;
+    background-attachment: local;
+    background-repeat: no-repeat;
+    
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.1),
+        0 0 0 1px rgba(255, 255, 255, 0.5);
+    color: #333;
+    position: relative;
+    animation: fadeIn 0.8s ease-out 0.2s both;
+}
+
+/* Анимация появления контейнера */
+.container {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out 0.2s forwards;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.8s ease-out 0.4s both;
+}
+
+.header h1 {
+    color: #222;
+    font-size: 28px;
+    animation: float 6s ease-in-out infinite;
+}
+
+.tagline {
+    color: #666;
+    font-style: italic;
+    animation: fadeIn 0.8s ease-out 0.6s both;
+}
+
+.bio {
+    text-align: center;
+    margin-bottom: 30px;
+    animation: fadeIn 0.8s ease-out 0.8s both;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+    object-fit: cover;
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.avatar:hover {
+    transform: scale(1.05);
+    border-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Секция с кнопками - добавляем фон панели */
+.buttons {
+    margin-bottom: 30px;
+    padding: 25px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 
+        inset 0 1px 3px rgba(255, 255, 255, 0.8),
+        0 5px 15px rgba(0, 0, 0, 0.05);
+    animation: fadeIn 0.8s ease-out 1s both;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Дополнительный слой для красоты */
+.buttons::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.3) 0%,
+        rgba(255, 255, 255, 0) 50%,
+        rgba(255, 255, 255, 0.3) 100%
+    );
+    pointer-events: none;
+}
+
+.buttons h2 {
+    color: #222;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+    animation: fadeIn 0.8s ease-out 1.2s both;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: center;
+    text-decoration: none;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 0.5s ease-out forwards;
+    box-shadow: 
+        0 4px 6px rgba(0, 0, 0, 0.1),
+        0 1px 3px rgba(0, 0, 0, 0.08);
+    z-index: 1;
+}
+
+/* Анимация появления кнопок с задержкой */
+.btn:nth-child(1) { animation-delay: 1.4s; }
+.btn:nth-child(2) { animation-delay: 1.5s; }
+.btn:nth-child(3) { animation-delay: 1.6s; }
+.btn:nth-child(4) { animation-delay: 1.7s; }
+
+/* Затемняющий слой поверх фонового изображения */
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.74);
+    z-index: -1;
+    transition: background-color 0.3s ease;
+}
+
+.btn.red {
+    background-color: #fff;
+    color: #333;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+/* Эффект при наведении */
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 
+        0 10px 20px rgba(0, 0, 0, 0.15),
+        0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover::before {
+    background: rgba(255, 255, 255, 0.95);
+}
+
+/* Эффект нажатия */
+.btn:active {
+    transform: translateY(-1px);
+    transition: transform 0.1s ease;
+}
+
+.footer {
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 15px;
+    animation: fadeIn 0.8s ease-out 1.8s both;
+}
+
+/* ШРИФТЫ */
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('fonts/who\ asks\ satan.ttf') format('truetype');
+}
+
+.header h1 {
+    font-family: 'MyCustomFont', sans-serif !important;
+    font-weight: 500;
+    font-size: 5rem !important;
+    color: #222 !important;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+@font-face {
+    font-family: 'MyCustomFont2';
+    src: url('fonts/Unbounded-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MyCustomFont3';
+    src: url('fonts/Unbounded-ExtraLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.buttons h2 {
+    font-family: 'MyCustomFont3', sans-serif !important;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #222 !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.buttons .btn.red {
+    font-family: 'MyCustomFont2', sans-serif !important;
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 12px;
+    border: 2px solid rgba(0, 0, 0, 0.1) !important;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #333 !important;
+    background-color: #fff !important;
+}
+
+@font-face {
+    font-family: 'MyCustomFont22';
+    src: url('fonts/Unbounded-Light.ttf') format('truetype');
+}
+
+.tagline {
+    font-family: 'MyCustomFont22', sans-serif !important;
+    font-weight: 200;
+    font-size: 0.5rem;
+    color: #666 !important;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Стили для текста внутри кнопок */
+.btn span {
+    position: relative;
+    z-index: 1;
+    display: block;
+}
+
+/* Эффект клика на кнопке */
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.1);
+    transform: translate(-50%, -50%);
+    transition: width 0.3s, height 0.3s;
+}
+
+.btn:active::after {
+    width: 300px;
+    height: 300px;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin: 10px;
+    }
+    
+    .header h1 {
+        font-size: 3.5rem !important;
+    }
+    
+    .buttons {
+        padding: 20px;
+    }
+    
+    .avatar {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .header h1 {
+        font-size: 2.5rem !important;
+    }
+    
+    .buttons h2 {
+        font-size: 1.5rem;
+    }
+}
