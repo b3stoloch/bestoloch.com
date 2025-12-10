@@ -65,7 +65,7 @@ body {
         /* Полупрозрачный белый слой (регулируйте последнее число - прозрачность) */
         linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.96)),
         /* Ваше фоновое изображение */
-        url('https://i.pinimg.com/originals/00/d7/af/00d7af33f7127746e4ba0d6b200de8bf.gif');
+        url('https://i.pinimg.com/originals/2d/45/49/2d4549aa172be64b62117e56c039f2dc.gif');
     
     background-size: cover;
     background-position: center;
@@ -382,4 +382,5 @@ body {
     .buttons h2 {
         font-size: 1.5rem;
     }
+
 }
