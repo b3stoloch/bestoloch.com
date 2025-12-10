@@ -53,12 +53,12 @@ body {
 }
 
 .header h1 {
-    color: #ff0000;
+    color: ##FFFFFF;
     font-size: 28px;
 }
 
 .tagline {
-    color: #aaa;
+    color: ##FFFFFF;
     font-style: italic;
 }
 
@@ -71,7 +71,7 @@ body {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    border: 3px solid #ff0000;
+    border: 3px solid ##FFFFFF;
     margin-bottom: 15px;
 }
 
@@ -111,14 +111,14 @@ body {
 }
 
 .btn.red {
-    background-color: #ff0000;
+    background-color: ##FFFFFF;
     color: white;
 }
 
 .btn.black {
     background-color: #222;
     color: #ff0000;
-    border: 2px solid #ff0000;
+    border: 2px solid ##FFFFFF;
 }
 
 .btn:hover {
@@ -217,5 +217,6 @@ body {
     letter-spacing: 1.5px;
 
 }
+
 
 
