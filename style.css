@@ -1,25 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body {
-    background: 
-        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), /* Затемняющий градиент */
-        url('https://i.pinimg.com/1200x/df/b1/9f/dfb19fd856363981b08905383fdc929d.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    color: #fff;
-    font-family: Arial, sans-serif;
-    min-height: 100vh;
-}
 
-body {
-    background-color: #000;
-    color: #fff;
-    font-family: Arial, sans-serif;
-    padding: 20px;
     min-height: 100vh;
 }
 
@@ -217,6 +196,7 @@ body {
     letter-spacing: 1.5px;
 
 }
+
 
 
 
